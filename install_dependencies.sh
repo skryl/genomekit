@@ -16,7 +16,7 @@ if $TEST_MODE; then
 fi
 
 # ----------- Ensure data directories exist -----------
-mkdir -p data/dbsnp data/reference data/clinvar
+mkdir -p data/reference
 
 # ----------- System Dependencies -----------
 echo "[1/5] Installing system packages..."
@@ -103,7 +103,7 @@ else
 fi
 
 # ----------- Download dbSNP VCF (build 156, hg38) -----------
-dbSNP_VCF="data/dbsnp/dbsnp_156_hg38.vcf.gz"
+dbSNP_VCF="data/reference/dbsnp_156_hg38.vcf.gz"
 echo "Checking for dbSNP VCF: $dbSNP_VCF"
 if [[ -f $dbSNP_VCF ]]; then
     echo "dbSNP VCF already exists: $dbSNP_VCF"

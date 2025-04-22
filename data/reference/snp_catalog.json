@@ -1,0 +1,628 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "description": "Catalog of SNPs for health and ancestry analysis",
+    "created": "2025-04-22"
+  },
+  "categories": {
+    "metabolism": [
+      {
+        "rs_id": "rs4680",
+        "position": "22:19963748",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "COMT G/G: Better dopamine metabolism; A/A: Anxiety-prone"
+      },
+      {
+        "rs_id": "rs1801133",
+        "position": "1:11856378",
+        "ref_genotype": "C/C",
+        "alt_genotype": "T/T",
+        "description": "MTHFR C677T: C/C normal folate metabolism; T/T reduced (~40% function)"
+      },
+      {
+        "rs_id": "rs1801131",
+        "position": "1:11854476",
+        "ref_genotype": "A/A",
+        "alt_genotype": "C/C",
+        "description": "MTHFR A1298C: A/A normal; C/C reduced folate metabolism activity"
+      },
+      {
+        "rs_id": "rs1050152",
+        "position": "7:30645223",
+        "ref_genotype": "T/T",
+        "alt_genotype": "C/C",
+        "description": "SLC22A4 1672C/T: T/T increased carnitine transport; C/C reduced"
+      },
+      {
+        "rs_id": "rs1799930",
+        "position": "8:18258103",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "NAT2 G590A: G/G rapid acetylator; A/A slow acetylator affecting drug metabolism"
+      },
+      {
+        "rs_id": "rs1799931",
+        "position": "8:18257854",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "NAT2 G857A: G/G rapid acetylator; A/A slow acetylator affecting drug metabolism"
+      },
+      {
+        "rs_id": "rs1208",
+        "position": "8:18258316",
+        "ref_genotype": "A/A",
+        "alt_genotype": "G/G",
+        "description": "NAT2: A/A rapid acetylator; G/G slow acetylator affecting drug metabolism"
+      },
+      {
+        "rs_id": "rs662",
+        "position": "7:94937446",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "PON1 Q192R: G/G better ability to detoxify organophosphates; A/A reduced"
+      }
+    ],
+    "inflammation": [
+      {
+        "rs_id": "rs20417",
+        "position": "1:186722460",
+        "ref_genotype": "G/G",
+        "alt_genotype": "C/C",
+        "description": "PTGS2 -765G>C: G/G associated with lower COX2 expression; C/C higher"
+      },
+      {
+        "rs_id": "rs1800795",
+        "position": "7:22766645",
+        "ref_genotype": "G/G",
+        "alt_genotype": "C/C",
+        "description": "IL6 -174G>C: G/G associated with lower IL-6 inflammation; C/C higher"
+      },
+      {
+        "rs_id": "rs1800629",
+        "position": "6:31543059",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "TNF -308G>A: G/G associated with lower TNF-α production; A/A higher"
+      },
+      {
+        "rs_id": "rs16944",
+        "position": "2:113594387",
+        "ref_genotype": "C/C",
+        "alt_genotype": "T/T",
+        "description": "IL1B -511C>T: C/C associated with lower IL-1β production; T/T higher"
+      },
+      {
+        "rs_id": "rs1143634",
+        "position": "2:113590390",
+        "ref_genotype": "C/C",
+        "alt_genotype": "T/T",
+        "description": "IL1B +3954C>T: C/C associated with lower IL-1β production; T/T higher"
+      },
+      {
+        "rs_id": "rs4553808",
+        "position": "4:123377980",
+        "ref_genotype": "A/A",
+        "alt_genotype": "G/G",
+        "description": "CTLA4 -1661A>G: A/A associated with better T-cell function; G/G reduced"
+      },
+      {
+        "rs_id": "rs4580644",
+        "position": "11:120154442",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "PAWR: G/G protective against inflammatory disease; A/A increased risk"
+      }
+    ],
+    "cardiovascular": [
+      {
+        "rs_id": "rs1801282",
+        "position": "3:12393125",
+        "ref_genotype": "G/G",
+        "alt_genotype": "C/C",
+        "description": "PPARG Pro12Ala: G/G protective against Type 2 diabetes; C/C increased risk"
+      },
+      {
+        "rs_id": "rs5186",
+        "position": "3:148459988",
+        "ref_genotype": "A/A",
+        "alt_genotype": "C/C",
+        "description": "AGTR1 A1166C: A/A lower risk of hypertension; C/C increased risk"
+      },
+      {
+        "rs_id": "rs1799983",
+        "position": "7:150999023",
+        "ref_genotype": "G/G",
+        "alt_genotype": "T/T",
+        "description": "NOS3 G894T: G/G better nitric oxide production; T/T reduced production"
+      },
+      {
+        "rs_id": "rs3025058",
+        "position": "11:102842889",
+        "ref_genotype": "6A/6A",
+        "alt_genotype": "5A/5A",
+        "description": "MMP3 -1171 5A/6A: 6A/6A lower MMP3 activity; 5A/5A higher activity"
+      },
+      {
+        "rs_id": "rs1799752",
+        "position": "17:64213675",
+        "ref_genotype": "I/I",
+        "alt_genotype": "D/D",
+        "description": "ACE Insertion/Deletion: I/I better endurance; D/D better for power/strength"
+      },
+      {
+        "rs_id": "rs9939609",
+        "position": "16:53820527",
+        "ref_genotype": "T/T",
+        "alt_genotype": "A/A",
+        "description": "FTO: T/T lower obesity risk; A/A higher risk (0.4kg/allele weight gain)"
+      },
+      {
+        "rs_id": "rs7412",
+        "position": "19:44908822",
+        "ref_genotype": "T/T",
+        "alt_genotype": "C/C",
+        "description": "APOE rs7412: T/T (E2) lower cholesterol, reduced Alzheimer's risk"
+      },
+      {
+        "rs_id": "rs429358",
+        "position": "19:44908684",
+        "ref_genotype": "T/T",
+        "alt_genotype": "C/C",
+        "description": "APOE rs429358: T/T lower Alzheimer's risk; C/C (E4) higher risk"
+      }
+    ],
+    "neurotransmitters": [
+      {
+        "rs_id": "rs6265",
+        "position": "11:27679916",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "BDNF G196A: G/G better stress resilience and memory; A/A reduced"
+      },
+      {
+        "rs_id": "rs6313",
+        "position": "13:46895829",
+        "ref_genotype": "T/T",
+        "alt_genotype": "C/C",
+        "description": "HTR2A T102C: T/T better response to antidepressants; C/C reduced"
+      },
+      {
+        "rs_id": "rs6311",
+        "position": "13:46897343",
+        "ref_genotype": "A/A",
+        "alt_genotype": "G/G",
+        "description": "HTR2A -1438G>A: A/A higher serotonin receptor expression; G/G lower"
+      },
+      {
+        "rs_id": "rs53576",
+        "position": "3:8804371",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "OXTR: G/G better empathy, lower stress; A/A reduced social sensitivity"
+      },
+      {
+        "rs_id": "rs1800497",
+        "position": "11:113400106",
+        "ref_genotype": "C/C",
+        "alt_genotype": "T/T",
+        "description": "ANKK1/DRD2 Taq1A: C/C higher dopamine receptor density; T/T lower"
+      },
+      {
+        "rs_id": "rs4633",
+        "position": "22:19963563",
+        "ref_genotype": "C/C",
+        "alt_genotype": "T/T",
+        "description": "COMT: C/C higher COMT enzyme function; T/T lower function"
+      },
+      {
+        "rs_id": "rs2868771",
+        "position": "22:40852480",
+        "ref_genotype": "G/G",
+        "alt_genotype": "T/T",
+        "description": "COMT: G/G higher frontal cognitive performance; T/T lower"
+      }
+    ],
+    "antioxidant": [
+      {
+        "rs_id": "rs1050450",
+        "position": "3:49394834",
+        "ref_genotype": "C/C",
+        "alt_genotype": "T/T",
+        "description": "GPX1 C599T: C/C better glutathione peroxidase function; T/T reduced"
+      },
+      {
+        "rs_id": "rs1695",
+        "position": "11:67585218",
+        "ref_genotype": "A/A",
+        "alt_genotype": "G/G",
+        "description": "GSTP1 A313G: A/A better detoxification capacity; G/G reduced"
+      },
+      {
+        "rs_id": "rs4880",
+        "position": "6:159692840",
+        "ref_genotype": "C/C",
+        "alt_genotype": "T/T",
+        "description": "SOD2 T175C: C/C better mitochondrial transport of SOD2; T/T reduced"
+      },
+      {
+        "rs_id": "rs1001179",
+        "position": "11:34460231",
+        "ref_genotype": "C/C",
+        "alt_genotype": "T/T",
+        "description": "CAT -262C>T: C/C higher catalase activity; T/T lower activity"
+      }
+    ],
+    "vitamin": [
+      {
+        "rs_id": "rs10741657",
+        "position": "11:14914878",
+        "ref_genotype": "A/A",
+        "alt_genotype": "G/G",
+        "description": "CYP2R1: A/A higher Vitamin D levels; G/G lower levels"
+      },
+      {
+        "rs_id": "rs7041",
+        "position": "4:71750730",
+        "ref_genotype": "G/G",
+        "alt_genotype": "T/T",
+        "description": "GC: G/G higher Vitamin D binding protein; T/T lower levels"
+      },
+      {
+        "rs_id": "rs2228570",
+        "position": "12:47879112",
+        "ref_genotype": "C/C",
+        "alt_genotype": "T/T",
+        "description": "VDR FokI: C/C more active Vitamin D receptor; T/T less active"
+      },
+      {
+        "rs_id": "rs1544410",
+        "position": "12:47846052",
+        "ref_genotype": "A/A",
+        "alt_genotype": "G/G",
+        "description": "VDR BsmI: A/A better bone mineral density; G/G reduced"
+      },
+      {
+        "rs_id": "rs731236",
+        "position": "12:47844610",
+        "ref_genotype": "T/T",
+        "alt_genotype": "C/C",
+        "description": "VDR TaqI: T/T better calcium metabolism; C/C reduced"
+      }
+    ],
+    "drug": [
+      {
+        "rs_id": "rs12248560",
+        "position": "10:94761900",
+        "ref_genotype": "T/T",
+        "alt_genotype": "C/C",
+        "description": "CYP2C19*17: T/T ultra-rapid metabolizer of many drugs; C/C normal"
+      },
+      {
+        "rs_id": "rs4244285",
+        "position": "10:94781859",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "CYP2C19*2: G/G normal function; A/A reduced metabolism"
+      },
+      {
+        "rs_id": "rs4986893",
+        "position": "10:94780653",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "CYP2C19*3: G/G normal function; A/A reduced metabolism"
+      },
+      {
+        "rs_id": "rs28399504",
+        "position": "10:94781858",
+        "ref_genotype": "A/A",
+        "alt_genotype": "G/G",
+        "description": "CYP2C19*4: A/A normal function; G/G reduced metabolism"
+      },
+      {
+        "rs_id": "rs1799853",
+        "position": "10:94942290",
+        "ref_genotype": "C/C",
+        "alt_genotype": "T/T",
+        "description": "CYP2C9*2: C/C normal metabolizer of warfarin/NSAIDs; T/T reduced"
+      },
+      {
+        "rs_id": "rs1057910",
+        "position": "10:94981296",
+        "ref_genotype": "A/A",
+        "alt_genotype": "C/C",
+        "description": "CYP2C9*3: A/A normal metabolizer of warfarin/NSAIDs; C/C reduced"
+      },
+      {
+        "rs_id": "rs3892097",
+        "position": "22:42128945",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "CYP2D6*4: G/G normal metabolizer of ~25% of drugs; A/A poor"
+      },
+      {
+        "rs_id": "rs35742686",
+        "position": "22:42130692",
+        "ref_genotype": "T/T",
+        "alt_genotype": "-/-",
+        "description": "CYP2D6*3: T/T normal metabolizer; - (deletion) poor metabolizer"
+      },
+      {
+        "rs_id": "rs5030655",
+        "position": "22:42130655",
+        "ref_genotype": "T/T",
+        "alt_genotype": "-/-",
+        "description": "CYP2D6*6: T/T normal metabolizer; - (deletion) poor metabolizer"
+      },
+      {
+        "rs_id": "rs59421388",
+        "position": "7:99652770",
+        "ref_genotype": "T/T",
+        "alt_genotype": "C/C",
+        "description": "CYP3A4*3: T/T normal metabolizer of most drugs; C/C reduced"
+      },
+      {
+        "rs_id": "rs776746",
+        "position": "7:99652770",
+        "ref_genotype": "A/A",
+        "alt_genotype": "G/G",
+        "description": "CYP3A5*3: A/A normal expression of CYP3A5; G/G reduced expression"
+      },
+      {
+        "rs_id": "rs1045642",
+        "position": "7:87138645",
+        "ref_genotype": "T/T",
+        "alt_genotype": "C/C",
+        "description": "ABCB1 3435C>T: T/T lower P-glycoprotein activity; C/C higher"
+      },
+      {
+        "rs_id": "rs2032582",
+        "position": "7:87160618",
+        "ref_genotype": "G/G",
+        "alt_genotype": "T/T",
+        "description": "ABCB1 2677G>T/A: G/G normal P-glycoprotein; T/T or A/A altered"
+      },
+      {
+        "rs_id": "rs762551",
+        "position": "15:74749576",
+        "ref_genotype": "A/A",
+        "alt_genotype": "C/C",
+        "description": "CYP1A2*1F: A/A rapid caffeine metabolism; C/C slower metabolism"
+      },
+      {
+        "rs_id": "rs1799931",
+        "position": "8:18257854",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "NAT2*7: G/G faster drug acetylator; A/A slower acetylator"
+      }
+    ],
+    "athletic": [
+      {
+        "rs_id": "rs1815739",
+        "position": "11:66560624",
+        "ref_genotype": "C/C",
+        "alt_genotype": "T/T",
+        "description": "ACTN3 R577X: C/C better for power/sprint performance; T/T endurance"
+      },
+      {
+        "rs_id": "rs8192678",
+        "position": "4:89015940",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "PPARGC1A G482S: G/G better aerobic capacity; A/A reduced"
+      },
+      {
+        "rs_id": "rs9939609",
+        "position": "16:53820527",
+        "ref_genotype": "T/T",
+        "alt_genotype": "A/A",
+        "description": "FTO: T/T less obesity risk, better exercise response; A/A higher risk"
+      },
+      {
+        "rs_id": "rs1042713",
+        "position": "5:148826877",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "ADRB2 G46A: G/G better lung function response to albuterol; A/A reduced"
+      },
+      {
+        "rs_id": "rs1042714",
+        "position": "5:148826910",
+        "ref_genotype": "C/C",
+        "alt_genotype": "G/G",
+        "description": "ADRB2 C79G: C/C protective against obesity; G/G increased risk"
+      }
+    ],
+    "longevity": [
+      {
+        "rs_id": "rs2802292",
+        "position": "6:108587315",
+        "ref_genotype": "G/G",
+        "alt_genotype": "T/T",
+        "description": "FOXO3: G/G associated with longevity; T/T normal aging"
+      },
+      {
+        "rs_id": "rs1800795",
+        "position": "7:22766645",
+        "ref_genotype": "G/G",
+        "alt_genotype": "C/C",
+        "description": "IL6 -174G>C: G/G lower inflammation levels; C/C higher"
+      },
+      {
+        "rs_id": "rs1061170",
+        "position": "1:196659237",
+        "ref_genotype": "T/T",
+        "alt_genotype": "C/C",
+        "description": "CFH Y402H: T/T lower macular degeneration risk; C/C higher risk"
+      },
+      {
+        "rs_id": "rs1799945",
+        "position": "6:26091179",
+        "ref_genotype": "C/C",
+        "alt_genotype": "G/G",
+        "description": "HFE H63D: C/C normal iron metabolism; G/G increased iron absorption"
+      },
+      {
+        "rs_id": "rs1800562",
+        "position": "6:26093141",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "HFE C282Y: G/G normal iron metabolism; A/A hemochromatosis risk"
+      },
+      {
+        "rs_id": "rs2070744",
+        "position": "7:150992991",
+        "ref_genotype": "T/T",
+        "alt_genotype": "C/C",
+        "description": "NOS3 -786T>C: T/T better nitric oxide production; C/C reduced"
+      },
+      {
+        "rs_id": "rs1800629",
+        "position": "6:31543031",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "TNF -308G>A: G/G lower inflammation markers; A/A higher"
+      }
+    ],
+    "sleep": [
+      {
+        "rs_id": "rs73598374",
+        "position": "12:121348906",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "ADA G22A: G/G deeper sleep patterns; A/A lighter sleep"
+      },
+      {
+        "rs_id": "rs12649507",
+        "position": "4:183636156",
+        "ref_genotype": "A/A",
+        "alt_genotype": "G/G",
+        "description": "CLOCK: A/A better sleep quality; G/G poorer sleep quality"
+      },
+      {
+        "rs_id": "rs1801260",
+        "position": "4:183635768",
+        "ref_genotype": "T/T",
+        "alt_genotype": "C/C",
+        "description": "CLOCK 3111T>C: T/T better circadian rhythm; C/C delayed sleep phase"
+      },
+      {
+        "rs_id": "rs10830963",
+        "position": "11:92708710",
+        "ref_genotype": "C/C",
+        "alt_genotype": "G/G",
+        "description": "MTNR1B: C/C better glycemic control; G/G increased fasting glucose"
+      }
+    ],
+    "cognitive": [
+      {
+        "rs_id": "rs429358",
+        "position": "19:44908684",
+        "ref_genotype": "T/T",
+        "alt_genotype": "C/C",
+        "description": "APOE epsilon 4: T/T lower Alzheimer's risk; C/C higher risk"
+      },
+      {
+        "rs_id": "rs7412",
+        "position": "19:44908822",
+        "ref_genotype": "T/T",
+        "alt_genotype": "C/C",
+        "description": "APOE epsilon 2: T/T lower Alzheimer's risk; C/C normal risk"
+      },
+      {
+        "rs_id": "rs6265",
+        "position": "11:27679916",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "BDNF G196A: G/G better cognitive function; A/A reduced"
+      },
+      {
+        "rs_id": "rs1800497",
+        "position": "11:113400106",
+        "ref_genotype": "C/C",
+        "alt_genotype": "T/T",
+        "description": "ANKK1 Taq1A: C/C better dopamine signaling; T/T reduced"
+      },
+      {
+        "rs_id": "rs4680",
+        "position": "22:19963748",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "COMT G472A: G/G better working memory under stress; A/A reduced"
+      }
+    ],
+    "nutrition": [
+      {
+        "rs_id": "rs9939609",
+        "position": "16:53820527",
+        "ref_genotype": "T/T",
+        "alt_genotype": "A/A",
+        "description": "FTO: T/T less obesity risk, better response to diet"
+      },
+      {
+        "rs_id": "rs1801282",
+        "position": "3:12393125",
+        "ref_genotype": "G/G",
+        "alt_genotype": "C/C",
+        "description": "PPARG Pro12Ala: Ala/Ala better insulin sensitivity"
+      },
+      {
+        "rs_id": "rs5082",
+        "position": "1:161241930",
+        "ref_genotype": "C/C",
+        "alt_genotype": "T/T",
+        "description": "APOA2: C/C sensitive to saturated fat intake"
+      },
+      {
+        "rs_id": "rs4994",
+        "position": "8:37823798",
+        "ref_genotype": "T/T",
+        "alt_genotype": "C/C",
+        "description": "ADRB3 Trp64Arg: T/T better response to exercise"
+      },
+      {
+        "rs_id": "rs1799883",
+        "position": "4:120241902",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "FABP2 Ala54Thr: G/G better fat metabolism"
+      },
+      {
+        "rs_id": "rs1051730",
+        "position": "15:78601997",
+        "ref_genotype": "G/G",
+        "alt_genotype": "A/A",
+        "description": "CHRNA3: G/G associated with lower nicotine dependence"
+      },
+      {
+        "rs_id": "rs4988235",
+        "position": "2:135851076",
+        "ref_genotype": "T/T",
+        "alt_genotype": "C/C",
+        "description": "MCM6/LCT: T/T associated with lactose tolerance"
+      },
+      {
+        "rs_id": "rs713598",
+        "position": "7:141673345",
+        "ref_genotype": "G/G",
+        "alt_genotype": "C/C",
+        "description": "TAS2R38 PAV: G/G bitter taste perception, vegetable intake"
+      },
+      {
+        "rs_id": "rs1726866",
+        "position": "7:141972804",
+        "ref_genotype": "A/A",
+        "alt_genotype": "G/G",
+        "description": "TAS2R38 AVI: A/A better taste receptor function"
+      },
+      {
+        "rs_id": "rs10246939",
+        "position": "7:141972933",
+        "ref_genotype": "C/C",
+        "alt_genotype": "T/T",
+        "description": "TAS2R38: C/C better taste receptor function"
+      }
+    ]
+  }
+}

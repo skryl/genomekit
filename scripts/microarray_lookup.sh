@@ -314,7 +314,7 @@ nutrition_snps=(
 )
 
 ########################  config / colours  ##########################
-DEFAULT_REPORT_FILE="./reports/all_snp_report.txt"
+DEFAULT_REPORT_FILE="./reports/microarray/all_snp_report.txt"
 GREEN='\033[0;32m'; YELLOW='\033[1;33m'; RED='\033[0;31m'; GRAY='\033[0;37m'; NC='\033[0m'
 
 ########################  CLI parsing  ###############################

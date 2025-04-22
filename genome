@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+# coding: utf-8
+
+"""
+GenomeKit CLI Wrapper
+
+This script allows you to run the genomekit CLI directly without installing the package.
+It serves as a convenient entry point during development or for users who don't want
+to install the package system-wide.
+
+Usage:
+    ./genome microarray --bam /path/to/file.bam --formats 23andMe_V5 --outdir ./output
+    ./genome snps /path/to/file.vcf --section metabolism
+    ./genome oc run --vcf /path/to/file.vcf
+
+Make sure to make this file executable:
+    chmod +x genome
+"""
+
+import sys
+import os
+
+# Add the project root directory to the Python path
+# This allows importing the genomekit package without installation
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+# Import the main function from the CLI module
+from genomekit.cli import main
+
+if __name__ == "__main__":
+    # Pass command-line arguments to the main function
+    sys.exit(main())
