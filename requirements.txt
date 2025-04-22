@@ -1,0 +1,10 @@
+# requirements.txt for genome project
+# Most scripts use only Python standard libraries (sqlite3, csv, os, argparse, sys, etc.)
+# Add Python packages below as needed for your analysis scripts
+
+pandas
+numpy
+biopython
+requests
+# For macOS GUI scripts (wgs_extract_microarray.py):
+tkmacosx  # optional, only needed for macOS GUI
