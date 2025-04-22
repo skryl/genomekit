@@ -161,7 +161,7 @@ class MicroarrayGenerator:
                     print("Using direct ploidy setting instead of ploidy file to avoid format issues")
 
                     # Call variants command with direct ploidy specification
-                    call_cmd = f'{BCFTOOLS} call {temp_pileup_vcf} --ploidy 2 -V indels -m -P 0 --threads {self.cpus} -Oz -o {temp_called_vcf}'
+                    call_cmd = f'{BCFTOOLS} call {temp_pileup_vcf} --ploidy-file "{ploidy_file}" -V indels -m -P 0 --threads {self.cpus} -Oz -o {temp_called_vcf}'
                     print(f"Running: {call_cmd}")
                     try:
                         subprocess.run(call_cmd, shell=True, check=True)
@@ -172,19 +172,44 @@ class MicroarrayGenerator:
                 else:
                     # Need to generate pileup first, then call variants
                     print("Step 1a: Generating pileup from BAM/CRAM...")
-                    pileup_cmd = f'{BCFTOOLS} mpileup -B -I -C 50 -T {ref_vcf} -f {ref_fasta} -Ou {self.input_file} -o {temp_pileup_vcf}'
-                    print(f"Running: {pileup_cmd}")
+                    # Simplify to match direct shell command approach
+                    # First, generate an uncompressed VCF
+                    temp_vcf = os.path.join(self.temp_dir, f"{input_basename}_pileup.vcf")
+
+                    # Use simple bcftools mpileup command similar to direct shell usage
+                    # IMPORTANT: Properly quote file paths to handle spaces
+                    pileup_cmd = f"bcftools mpileup -B -I -C 50 -f '{ref_fasta}' -Ou -o '{temp_pileup_vcf}' '{self.input_file}'"
+                    print(f"Running simplified mpileup: {pileup_cmd}")
                     try:
-                        subprocess.run(pileup_cmd, shell=True, check=True)
+                        result = subprocess.run(pileup_cmd, shell=True, check=True, stderr=subprocess.PIPE, universal_newlines=True)
+                        print(f"mpileup stderr: {result.stderr}")
                     except subprocess.CalledProcessError as e:
                         print(f"Error executing command: {e}")
+                        print(f"mpileup stderr: {e.stderr}")
                         print("Pileup generation failed - this is a critical step. Aborting.")
                         return False
 
                     print("Step 1b: Calling variants with bcftools...")
-                    # Use direct ploidy setting instead of ploidy file
-                    print("Using direct ploidy setting instead of ploidy file to avoid format issues")
-                    call_cmd = f'{BCFTOOLS} call {temp_pileup_vcf} --ploidy 2 -V indels -m -P 0 --threads {self.cpus} -Oz -o {temp_called_vcf}'
+                    # Use ploidy file from reference directory (WGS Extractor approach)
+                    print("Using ploidy file for variant calling")
+                    # Get path to ploidy file
+                    ploidy_file = os.path.join(self.reference_dir, "ploidy.txt")
+
+                    # Check if the ploidy file exists
+                    if not os.path.exists(ploidy_file):
+                        print(f"Warning: Ploidy file {ploidy_file} not found. Creating a default ploidy file.")
+                        # Create a default ploidy file with standard human ploidy (2 for autosomes)
+                        with open(ploidy_file, 'w') as f:
+                            f.write("* * * F 2\n")
+                            f.write("* * * M 2\n")
+
+                    # Quote paths to handle spaces
+                    quoted_pileup = f'"{temp_pileup_vcf}"'
+                    quoted_called = f'"{temp_called_vcf}"'
+                    quoted_ploidy = f'"{ploidy_file}"'
+
+                    # Use WGS Extractor style command with ploidy file
+                    call_cmd = f"{BCFTOOLS} call '{temp_pileup_vcf}' --ploidy-file '{ploidy_file}' -V indels -m -P 0 --threads {self.cpus} -Oz -o '{temp_called_vcf}'"
                     print(f"Running: {call_cmd}")
                     try:
                         subprocess.run(call_cmd, shell=True, check=True)
