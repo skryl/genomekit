@@ -1,12 +1,15 @@
-# Genome Analysis Toolkit
+# GenomeKit
 
-A modular toolkit for SNP lookup, VCF processing, and clinical variant annotation using reference and public databases.
+A comprehensive Python package for genome analysis, including SNP checking, microarray generation, and clinical variant annotation. GenomeKit provides a unified, modular toolkit for processing genomic data using various reference databases and third-party tools.
 
 ## Features
-- **SNP Lookup:** Query SNPs and display color-coded genotype interpretations from reports or VCFs.
-- **VCF Processing:** Merge, annotate, and index VCF files using dbSNP and reference genomes.
-- **Clinical Annotation:** Integrate OpenCravat (oc) and GATK for advanced clinical variant analysis. Several scripts (e.g., `scripts/check_all_snps.sh`) use OpenCravat to generate clinical variant reports.
-- **Automated Setup:** Robust `install_dependencies.sh` script to install all required tools, Python modules, and reference data, with idempotent file checks and optional test mode.
+
+- **Microarray Generation:** Convert BAM/CRAM files to various microarray formats (23andMe, Ancestry, FTDNA) with smart checkpointing to resume interrupted operations and avoid redundant processing.
+
+- **SNP Checking:** Query clinically relevant SNPs with parallel processing for VCF files and display color-coded genotype interpretations (protective, risk, carrier status) with detailed explanations.
+
+- **Clinical Variant Analysis:** Integrate OpenCravat for comprehensive variant annotation with data from multiple sources (ClinVar, gnomAD, COSMIC, OMIM) and generate reports of clinically significant variants.
+
 
 ## Quick Start
 
@@ -155,7 +158,7 @@ The tool will:
 ./genome snps data/output/microarray/CombinedKit.txt
 
 # Analyze all SNP categories from VCF
-./genome snps data/output/microarray/temp/sample_annotated.vcf.gz
+./genome snps data/output/microarray/sample_annotated.vcf.gz
 
 # Check only specific SNP categories
 ./genome snps data/output/microarray/CombinedKit.txt --section metabolism
@@ -175,10 +178,10 @@ The SNP analysis will:
 
 ```bash
 # Run OpenCravat analysis on a VCF file
-./genome oc run --vcf data/nebula/sample.vcf --outdir data/clinical_analysis
+./genome oc run --vcf data/output/microarray/sample_annotated_vcf.vcf.gz --outdir data/clinical_analysis
 
 # Run with specific annotators
-./genome oc run --vcf data/nebula/sample.vcf \
+./genome oc run --vcf data/output/microarray/sample_annotated.vcf \
   --annotators clinvar gnomad cosmic omim dbsnp \
   --outdir data/clinical_analysis
 

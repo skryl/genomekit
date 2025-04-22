@@ -544,22 +544,52 @@ class SNPChecker:
                                 # Get genotype for this SNP
                                 gt, actual_gt = self._fetch_genotype(chrpos, rsid)
                                 
-                                # Determine status based on genotype
-                                if gt == "Unknown/Unknown":
+                                # Process the genotype using the same logic as check_snp
+                                # Prepare different genotype representations for matching
+                                if actual_gt != "Unknown/Unknown":
+                                    # Get alleles
+                                    g1, g2 = actual_gt.split("/")
+                                    
+                                    # Standard representation
+                                    user_gt = actual_gt
+                                    # Reversed representation
+                                    rev_gt = f"{g2}/{g1}"
+                                    # Complement representations
+                                    comp_user_gt = f"{self._get_complement(g1)}/{self._get_complement(g2)}"
+                                    comp_rev_gt = f"{self._get_complement(g2)}/{self._get_complement(g1)}"
+                                    
+                                    # Default display and status
+                                    display_gt = user_gt
+                                    status = "CARRIER"  # Default status
+                                    status_color = self.colors["YELLOW"]
+                                    
+                                    # Determine which representation to display (same as in check_snp)
+                                    if user_gt == ref_gt or user_gt == alt_gt:
+                                        display_gt = user_gt
+                                    elif rev_gt == ref_gt or rev_gt == alt_gt:
+                                        display_gt = rev_gt
+                                    elif comp_user_gt == ref_gt or comp_user_gt == alt_gt:
+                                        display_gt = comp_user_gt
+                                    elif comp_rev_gt == ref_gt or comp_rev_gt == alt_gt:
+                                        display_gt = comp_rev_gt
+                                    
+                                    # Determine status (same logic as in check_snp)
+                                    for match_gt in [user_gt, rev_gt, comp_user_gt, comp_rev_gt]:
+                                        if match_gt == ref_gt:
+                                            status = "GOOD"
+                                            status_color = self.colors["GREEN"]
+                                            break
+                                        elif match_gt == alt_gt:
+                                            status = "RISK"
+                                            status_color = self.colors["RED"]
+                                            break
+                                else:
+                                    display_gt = "Unknown/Unknown"
                                     status = "UNKNOWN"
                                     status_color = self.colors["GRAY"]
-                                elif gt == ref_gt:
-                                    status = "NORMAL"
-                                    status_color = self.colors["GREEN"]
-                                elif gt == alt_gt:
-                                    status = "RISK"
-                                    status_color = self.colors["RED"]
-                                else:
-                                    status = "CARRIER"
-                                    status_color = self.colors["YELLOW"]
                                 
                                 # Store result
-                                result_list.append((rsid, gt, status, status_color, interpretation))
+                                result_list.append((rsid, display_gt, status, status_color, interpretation))
                             except Exception as e:
                                 if self.debug:
                                     print(f"Error processing SNP {rsid}: {str(e)}")
