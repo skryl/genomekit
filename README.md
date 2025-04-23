@@ -8,6 +8,7 @@ A comprehensive Python package for genome analysis, including SNP checking, micr
 
 - **SNP Checking:** Query clinically relevant SNPs with parallel processing for VCF files and display color-coded genotype interpretations (protective, risk, carrier status) with detailed explanations.
 
+oks
 - **Clinical Variant Analysis:** Integrate OpenCravat for comprehensive variant annotation with data from multiple sources (ClinVar, gnomAD, COSMIC, OMIM) and generate reports of clinically significant variants.
 
 

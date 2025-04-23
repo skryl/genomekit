@@ -155,11 +155,6 @@ class MicroarrayGenerator:
                     print(f"Step 1a: Using existing pileup VCF: {temp_pileup_vcf}")
                     print(f"Step 1b: Calling variants with bcftools...")
 
-                    # Instead of using a ploidy file which is causing parsing issues,
-                    # we'll use the --ploidy flag to set a global ploidy level
-                    # This is simpler and avoids the file format issues
-                    print("Using direct ploidy setting instead of ploidy file to avoid format issues")
-
                     # Call variants command with direct ploidy specification
                     call_cmd = f'{BCFTOOLS} call {temp_pileup_vcf} --ploidy-file "{ploidy_file}" -V indels -m -P 0 --threads {self.cpus} -Oz -o {temp_called_vcf}'
                     print(f"Running: {call_cmd}")
